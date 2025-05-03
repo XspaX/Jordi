@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ART&SERVEI - Horas Extras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ART&SERVEI - Calculadora de Horas Extras</h1>
+
+  <div id="config">
+    <h2>Configuración de Tarifas</h2>
+    <label>Hora normal (€): <input type="number" id="tarifaNormal" /></label><br>
+    <label>Hora festiva (€): <input type="number" id="tarifaFestiva" /></label><br>
+    <label>Hora comida (€): <input type="number" id="tarifaComida" /></label><br>
+    <button onclick="guardarTarifas()">Guardar Tarifas</button>
+  </div>
+
+  <hr>
+
+  <div id="registro">
+    <h2>Registrar Horas del Día</h2>
+    <label>Fecha: <input type="date" id="fecha" /></label><br>
+    <label>Horas trabajadas: <input type="number" id="horas" /></label><br>
+    <label>¿Cobraste la hora de comida?
+      <select id="comida">
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+    </label><br>
+    <button onclick="registrarDia()">Registrar Día</button>
+  </div>
+
+  <hr>
+
+  <div id="resumen">
+    <h2>Resumen Quincenal</h2>
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <p id="resultado"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
